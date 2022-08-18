@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Equipments>
+
+    <company>QCOMP</company>
+
+    <BussinessUnit>The Public Limited Liability Company </BussinessUnit>
+
+    <EquipmentDetail>
+
+        <EquipmentType>Excavators</EquipmentType>
+
+        <Status>Allocated</Status>
+
+        <Quantity>10000units</Quantity>
+
+        <Duration>12days</Duration>
+
+        <AllocatedQuantity>500units</AllocatedQuantity>
+
+        <EquipmentStartDateTime>2002-08-02T09:00:00</EquipmentStartDateTime>
+
+        <EquipmentEndDateTime>2002-08-14T09:00:00</EquipmentEndDateTime>
+
+    </EquipmentDetail>
+
+    <EquipmentDetail>
+
+        <EquipmentType>Excavators</EquipmentType>
+
+        <Status>Allocated</Status>
+
+        <Quantity>10000units</Quantity>
+
+        <Duration>12days</Duration>
+
+        <AllocatedQuantity>500units</AllocatedQuantity>
+
+        <EquipmentStartDateTime>2002-08-02T09:00:00</EquipmentStartDateTime>
+
+        <EquipmentEndDateTime>2002-08-14T09:00:00</EquipmentEndDateTime>
+
+    </EquipmentDetail>
+
+    <EquipmentDetail>
+
+        <EquipmentType>Scrappers</EquipmentType>
+
+        <Status>New</Status>
+
+        <Quantity>5000units</Quantity>
+
+        <Duration>5days</Duration>
+
+        <AllocatedQuantity>100units</AllocatedQuantity>
+
+        <EquipmentStartDateTime>2002-08-02T09:00:00</EquipmentStartDateTime>
+
+        <EquipmentEndDateTime>2002-08-07T09:00:00</EquipmentEndDateTime>
+
+    </EquipmentDetail>
+
+    <EquipmentDetail>
+
+        <EquipmentType>Rollers</EquipmentType>
+
+        <Status>Available</Status>
+
+        <Quantity>7000units</Quantity>
+
+        <Duration>8days</Duration>
+
+        <AllocatedQuantity>100units</AllocatedQuantity>
+
+        <EquipmentStartDateTime>2002-08-02T09:00:00</EquipmentStartDateTime>
+
+        <EquipmentEndDateTime>2002-08-10T09:00:00</EquipmentEndDateTime>
+
+    </EquipmentDetail>
+
+
+
+</Equipments>

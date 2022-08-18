@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Equipments>
+
+    <company>NORDM</company>
+
+    <BussinessUnit>The Partnership </BussinessUnit>
+
+    <EquipmentDetail>
+
+        <EquipmentType>Scrapper</EquipmentType>
+
+        <Status>Available</Status>
+
+        <Quantity>80000units</Quantity>
+
+        <Duration>12days</Duration>
+
+        <AllocatedQuantity>1000units</AllocatedQuantity>
+
+        <EquipmentStartDateTime>2002-08-02T09:00:00</EquipmentStartDateTime>
+
+        <EquipmentEndDateTime>2002-08-14T09:00:00</EquipmentEndDateTime>
+
+    </EquipmentDetail>
+
+
+
+    <EquipmentDetail>
+
+        <EquipmentType>Excavators</EquipmentType>
+
+        <Status>New</Status>
+
+        <Quantity>7000units</Quantity>
+
+        <Duration>6days</Duration>
+
+        <AllocatedQuantity>500units</AllocatedQuantity>
+
+        <EquipmentStartDateTime>2002-08-02T09:00:00</EquipmentStartDateTime>
+
+        <EquipmentEndDateTime>2002-08-08T09:00:00</EquipmentEndDateTime>
+
+    </EquipmentDetail>
+
+    <EquipmentDetail>
+
+        <EquipmentType>Rollers</EquipmentType>
+
+        <Status>Allocated</Status>
+
+        <Quantity>1000units</Quantity>
+
+        <Duration>2days</Duration>
+
+        <AllocatedQuantity>100units</AllocatedQuantity>
+
+        <EquipmentStartDateTime>2002-08-02T09:00:00</EquipmentStartDateTime>
+
+        <EquipmentEndDateTime>2002-08-04T09:00:00</EquipmentEndDateTime>
+
+    </EquipmentDetail>
+
+
+
+</Equipments>

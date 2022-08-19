@@ -1,0 +1,97 @@
+1-> (: Write FLWOR query to get all Equipment Details from Equipment collection. :)
+
+xquery version "1.0-ml";
+for $document in collection("Equipments")
+return $document
+
+2-> (: Write FLWOR query to get all Equipment Details from Equipments where Equipment Type is “Rollers”.  :)
+(: Using Collections :)
+
+xquery version "1.0-ml";
+for $document in collection("Equipments")
+return element details {(
+$document//company,
+$document//BussinessUnit,
+$document//EquipmentDetail[EquipmentType eq "Rollers"]
+)}
+
+
+3-> (: Write FLWOR query to get all Equipment Type and Allocated Quantity where Company is “WNDSR”:)
+
+xquery version "1.0-ml";
+let $EquipmentType :=  collection("Equipments")[//company eq "WNDSR"]//EquipmentType 
+let $Quantity :=  collection("Equipments")[//company eq "WNDSR"]//Quantity
+for $i in  1 to fn:count($EquipmentType)
+return  element Details {($EquipmentType[$i],$Quantity[$i])}
+
+4-> (:Write FLWOR query to get all the Equipments Details where status is “Allocated”.  :)
+xquery version "1.0-ml";
+for $document in collection("Equipments")
+return element details {(
+$document//company,
+$document//BussinessUnit,
+$document//EquipmentDetail[Status eq "Allocated"]
+)}
+
+
+5-> (:Write FLWOR query to get all Equipment Type and count. :)
+xquery version "1.0-ml";
+let $document := collection("Equipments")
+let $count :=fn:count(fn:distinct-values($document//EquipmentType))
+return element details { 
+element EquipmentType {(fn:distinct-values($document//EquipmentType))},
+element Count{ $count }
+}
+
+
+6-> (:Write FLWOR query to get all Equipment Details grouped by “Equipment Type”.:)
+xquery version "1.0-ml";
+for $document in collection("Equipments")//EquipmentDetail
+order by $document//EquipmentType
+return $document
+
+7->  
+
+Write a Function which return Interval For given input start datetime, end datetime and interval duration. 
+
+declare function local:formatYourDate($startDateTime as xs:dateTime,$endDateTime as xs:dateTime,$n as xs:integer)
+{
+if($startDateTime ne $endDateTime )
+then 
+let $startD := $startDateTime+xs:dayTimeDuration("P0DT1H0M")
+return(
+ element IntervalDetails{ element interval{attribute serialno{$n}, 
+ element Start{$startDateTime},
+ element End{$startD}}},local:formatYourDate($startD,$endDateTime,$n+1))
+ else 
+ (
+ "No Time For You"
+ )
+};
+local:formatYourDate(xs:dateTime("2022-08-05T10:10:00"),xs:dateTime("2022-08-06T16:10:00"),1)
+
+8->
+
+(:Write a Function to convert input datetime into UTC datetime.:)
+xquery version "1.0-ml";
+let $dateTimeFormat := fn:format-dateTime(fn:current-dateTime(),
+                 "[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z")
+return $dateTimeFormat
+
+9->
+(:Write FLWOR query to update status to “Available” where EquipmentEndDateTime is less than the current date time. :)
+xquery version "1.0-ml";
+for $document in  collection("Equipments")[//EquipmentEndDateTime lt fn:current-dateTime()]
+return xdmp:node-replace($document//Status, <Status>Available</Status>) ;
+"Upated Sucessfully"
+
+10->
+(: load documents :)
+xdmp:eval('for $d in xdmp:filesystem-directory("C:\Users\Amaresh\git\Equipment Management Assignment\XMl Files")//dir:entry
+return xdmp:document-load($d//dir:pathname, 
+  <options xmlns="xdmp:document-load">
+    <uri>{fn:string($d//dir:filename)}</uri>
+  </options>)',  (),
+		  <options xmlns="xdmp:eval">
+		    <database>{xdmp:database("world-leaders")}</database>
+		  </options>)

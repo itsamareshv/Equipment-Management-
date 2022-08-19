@@ -74,7 +74,7 @@ local:formatYourDate(xs:dateTime("2022-08-05T05:10:00"),xs:dateTime("2022-08-06T
 
 (:Write a Function to convert input datetime into UTC datetime.:)
 xquery version "1.0-ml";
-let $dateTimeFormat := fn:format-dateTime(fn:current-dateTime(),
+let $dateTimeFormat := fn:format-dateTime(xs:dateTime("2022-08-05 10:10:00"),
                  "[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z")
 return $dateTimeFormat
 

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Equipments>
 
-    <company>NORDM</company>
+    <company>TCOMP</company>
 
     <BussinessUnit>The Partnership </BussinessUnit>
 
     <EquipmentDetail>
 
-        <EquipmentType>Scrapper</EquipmentType>
+        <EquipmentType>Scrappers</EquipmentType>
 
         <Status>Available</Status>
 

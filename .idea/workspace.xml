@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10a44eeb-a1be-429f-9c9b-f702235cab50" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Equipment Management Assignment.iml" afterDir="false" />
+    <list default="true" id="10a44eeb-a1be-429f-9c9b-f702235cab50" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/XMl Files/Equipments1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XMl Files/Equipments2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XMl Files/Equipments3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XMl Files/Equipments4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Equipments1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Equipments2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Equipments3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Equipments4.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +24,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2DWAL7Mpbx3hWDUa9zQSkfxr0jA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
@@ -40,6 +47,21 @@
       <option name="presentableId" value="Default" />
       <updated>1660804410821</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1660805224831</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660805224831</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first commit">
+      <created>1660805257323</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660805257323</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -52,5 +74,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>

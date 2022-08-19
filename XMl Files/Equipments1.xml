@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Equipments>
 
     <company>WNDSR</company>
@@ -20,11 +19,9 @@
 
         <EquipmentStartDateTime>2002-08-02T09:00:00</EquipmentStartDateTime>
 
-        <EquipmentEndDateTime>2002-08-12T09:00:00</EquipmentEndDateTime>
+        <EquipmentEndDateTime>2023-08-15T09:00:00</EquipmentEndDateTime>
 
     </EquipmentDetail>
-
-
 
     <EquipmentDetail>
 
@@ -40,7 +37,7 @@
 
         <EquipmentStartDateTime>2002-08-02T09:00:00</EquipmentStartDateTime>
 
-        <EquipmentEndDateTime>2002-08-07T09:00:00</EquipmentEndDateTime>
+        <EquipmentEndDateTime>2023-08-07T09:00:00</EquipmentEndDateTime>
 
     </EquipmentDetail>
 
@@ -58,9 +55,11 @@
 
         <EquipmentStartDateTime>2002-08-02T09:00:00</EquipmentStartDateTime>
 
-        <EquipmentEndDateTime>2002-08-09T09:00:00</EquipmentEndDateTime>
+        <EquipmentEndDateTime>2022-08-20T09:00:00</EquipmentEndDateTime>
 
     </EquipmentDetail>
+
+
 
 
 

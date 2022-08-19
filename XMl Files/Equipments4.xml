@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
 
 <Equipments>
 
-    <company>TCOMP</company>
+    <company>NORDM</company>
 
     <BussinessUnit>The Partnership </BussinessUnit>
 
     <EquipmentDetail>
 
-        <EquipmentType>Scrapper</EquipmentType>
+        <EquipmentType>Scrappers</EquipmentType>
 
         <Status>Available</Status>
 
@@ -61,7 +60,6 @@
         <EquipmentEndDateTime>2002-08-04T09:00:00</EquipmentEndDateTime>
 
     </EquipmentDetail>
-
 
 
 </Equipments>

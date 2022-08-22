@@ -6,31 +6,23 @@ return $document
 
 2-> (: Write FLWOR query to get all Equipment Details from Equipments where Equipment Type is “Rollers”.  :)
 (: Using Collections :)
-
 xquery version "1.0-ml";
-for $document in collection("Equipments")
+for $document in collection("Equipments")//EquipmentDetail[EquipmentType eq "Rollers"]
 return element details {(
-$document//company,
-$document//BussinessUnit,
-$document//EquipmentDetail[EquipmentType eq "Rollers"]
+$document
 )}
 
 
 3-> (: Write FLWOR query to get all Equipment Type and Allocated Quantity where Company is “WNDSR”:)
-
 xquery version "1.0-ml";
-let $EquipmentType :=  collection("Equipments")[//company eq "WNDSR"]//EquipmentType 
-let $Quantity :=  collection("Equipments")[//company eq "WNDSR"]//Quantity
-for $i in  1 to fn:count($EquipmentType)
-return  element Details {($EquipmentType[$i],$Quantity[$i])}
+for $document in collection("Equipments")[//company eq "WNDSR"]
+return element result {($document//EquipmentType ,$document//Quantity)}
 
 4-> (:Write FLWOR query to get all the Equipments Details where status is “Allocated”.  :)
 xquery version "1.0-ml";
-for $document in collection("Equipments")
+for $document in collection("Equipments")//EquipmentDetail[Status eq "Allocated"]
 return element details {(
-$document//company,
-$document//BussinessUnit,
-$document//EquipmentDetail[Status eq "Allocated"]
+$document
 )}
 
 
@@ -64,9 +56,7 @@ return(
  element Start{$startDateTime},
  element End{$startD}}},local:formatYourDate($startD,$endDateTime,$n+1))
  else 
- (
- "No Time For You"
- )
+ ()
 };
 local:formatYourDate(xs:dateTime("2022-08-05T05:10:00"),xs:dateTime("2022-08-06T16:10:00"),1)
 
@@ -93,5 +83,5 @@ return xdmp:document-load($d//dir:pathname,
     <uri>{fn:string($d//dir:filename)}</uri>
   </options>)',  (),
 		  <options xmlns="xdmp:eval">
-		    <database>{xdmp:database("world-leaders")}</database>
+		    <database>{xdmp:database("equipmentdb")}</database>
 		  </options>)

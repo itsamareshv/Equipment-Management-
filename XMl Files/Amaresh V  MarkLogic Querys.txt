@@ -28,16 +28,6 @@ $document
 
 5-> (:Write FLWOR query to get all Equipment Type and count. :)
 xquery version "1.0-ml";
-let $document := collection("Equipments")
-let $count :=fn:count(fn:distinct-values($document//EquipmentType))
-return element details { 
-element EquipmentType {(fn:distinct-values($document//EquipmentType))},
-element Count{ $count }
-}
-
-OR
-
-xquery version "1.0-ml";
 let $document := collection("Equipments")//EquipmentType
 return element details { 
 element EquipmentType {($document)},
@@ -84,13 +74,3 @@ for $document in  collection("Equipments")[//EquipmentEndDateTime lt fn:current-
 return xdmp:node-replace($document//Status, <Status>Available</Status>) ;
 "Upated Sucessfully"
 
-10->
-(: load documents :)
-xdmp:eval('for $d in xdmp:filesystem-directory("C:\Users\Amaresh\git\Equipment Management Assignment\XMl Files")//dir:entry
-return xdmp:document-load($d//dir:pathname, 
-  <options xmlns="xdmp:document-load">
-    <uri>{fn:string($d//dir:filename)}</uri>
-  </options>)',  (),
-		  <options xmlns="xdmp:eval">
-		    <database>{xdmp:database("equipmentdb")}</database>
-		  </options>)

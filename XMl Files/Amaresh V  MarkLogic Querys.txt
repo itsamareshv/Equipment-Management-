@@ -35,6 +35,15 @@ element EquipmentType {(fn:distinct-values($document//EquipmentType))},
 element Count{ $count }
 }
 
+OR
+
+xquery version "1.0-ml";
+let $document := collection("Equipments")//EquipmentType
+return element details { 
+element EquipmentType {($document)},
+element Count{(fn:count($document))}
+}
+
 
 6-> (:Write FLWOR query to get all Equipment Details grouped by “Equipment Type”.:)
 xquery version "1.0-ml";
